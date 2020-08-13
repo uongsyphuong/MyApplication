@@ -15,7 +15,7 @@ val dbModule = module {
     }
 
     single {
-        get<MyAppDb>().getTestDao()
+        get<MyAppDb>().getDeviceDao()
     }
 
 }

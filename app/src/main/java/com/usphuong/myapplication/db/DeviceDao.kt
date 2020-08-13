@@ -4,15 +4,15 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.usphuong.myapplication.model.TestModel
+import com.usphuong.myapplication.model.Device
 
 @Dao
-interface TestDao {
+interface DeviceDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(testModel: TestModel?): Long
+    fun insert(device: Device): Long
 
-    @Query("SELECT * FROM TestModel")
-    fun getTestModel(): List<TestModel>
+    @Query("SELECT * FROM Device")
+    fun getListDevice(): List<Device>
 
 //    @Query("DELETE FROM TestModel WHERE uid=:uid")
 //    fun deleteTestModel(uid: String): Int

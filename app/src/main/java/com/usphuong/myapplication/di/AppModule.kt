@@ -1,16 +1,16 @@
 package com.usphuong.myapplication.di
 
-import com.usphuong.myapplication.repository.TestRepository
-import com.usphuong.myapplication.viewModel.TestViewModel
+import com.usphuong.myapplication.repository.DeviceRepository
+import com.usphuong.myapplication.viewModel.DeviceViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val appModule = module {
 
     single {
-        TestRepository(get())
+        DeviceRepository(get())
     }
 
-    viewModel { TestViewModel(get()) }
+    viewModel { DeviceViewModel(get()) }
 
 }
